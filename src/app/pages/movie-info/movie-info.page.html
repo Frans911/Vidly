@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label style="font-size: 11pt;" position="floating"> Name </ion-label>
+    <ion-input [(ngModel)]="movie.name"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label style="font-size: 11pt;" position="floating"> Description </ion-label>
+      <ion-textarea [(ngModel)]="movie.description" rows="8"></ion-textarea>
+    </ion-item>
+</ion-content>
+<ion-footer *ngIf="!movie.id">
+  <ion-toolbar text-center color="light">
+    <ion-button style="text-transform: none;"  color="secondary" (click)="addMovie()">
+      <ion-icon name="add-circle" slot="start"></ion-icon>
+      Create movie
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+<ion-footer *ngIf="movie.id">
+  <ion-row no-padding text-center>
+    <ion-col size="6">
+      <ion-button expand="block" fill="outline" color="danger" (click)="deleteMovie()">
+        <ion-icon name="trash" slot="start"></ion-icon>
+        Remove
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" (click)="updateMovie()">
+          <ion-icon name="save" slot="start"></ion-icon>
+          Update
+        </ion-button>
+      </ion-col>
+  </ion-row>
+</ion-footer>
+

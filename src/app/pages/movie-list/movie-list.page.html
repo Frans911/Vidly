@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary"  routerLink="/movieInfo">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <ion-item button *ngFor="let movie of (movies | async)" [routerLink]="['/movieInfo',movie.id]">
+      {{movie.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

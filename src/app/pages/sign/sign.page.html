@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>
+      Vidly
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="margin: 25% 0 0 0;">
+      <ion-col>
+         
+      </ion-col>
+      <ion-col>
+          <ion-img  src="../assets/images/logo.png"></ion-img>
+
+      </ion-col>
+      <ion-col>
+         
+      </ion-col> 
+    </ion-row> 
+    <ion-row style="margin: 5% 0 0 15%;">
+      <br>
+      <ion-list>
+          <ion-item >
+              <ion-label style="font-size: 11pt;font-weight: bold"  position="floating">Email</ion-label>
+              <ion-input [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label style="font-size: 11pt;font-weight: bold" position="floating">Password</ion-label>
+              <ion-input [(ngModel)]="password"></ion-input>
+          </ion-item> 
+          <br>
+              <ion-button style="text-transform: none;" expand="block" color="light" routerLink="/movie">Sign In</ion-button> 
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>
