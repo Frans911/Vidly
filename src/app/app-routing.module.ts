@@ -6,7 +6,9 @@ const routes: Routes = [
   { path: 'sign', loadChildren: './pages/sign/sign.module#SignPageModule' },
   { path: 'movie', loadChildren: './pages/movie-list/movie-list.module#MovieListPageModule' },
   { path: 'movieInfo', loadChildren: './pages/movie-info/movie-info.module#MovieInfoPageModule' },
-  { path: 'movieInfo/:id', loadChildren: './pages/movie-info/movie-info.module#MovieInfoPageModule' },  
+  { path: 'movieInfo/:id', loadChildren: './pages/movie-info/movie-info.module#MovieInfoPageModule' },
+  { path: 'sign-up', loadChildren: './pages/sign-up/sign-up.module#SignUpPageModule' },
+ 
 ];
 
 @NgModule({

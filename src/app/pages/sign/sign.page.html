@@ -20,20 +20,28 @@
          
       </ion-col> 
     </ion-row> 
-    <ion-row style="margin: 5% 0 0 15%;">
-      <br>
-      <ion-list>
-          <ion-item >
-              <ion-label style="font-size: 11pt;"  position="floating">Email</ion-label>
-              <ion-input [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label style="font-size: 11pt;" position="floating">Password</ion-label>
-              <ion-input [(ngModel)]="password"></ion-input>
-          </ion-item> 
-          <br>
-              <ion-button style="text-transform: none;" expand="block" color="light" routerLink="/movie">Sign In</ion-button> 
-      </ion-list>
+    <ion-row padding>
+        <ion-col padding> 
+            <ion-list>
+                <ion-item >
+                    <ion-label style="font-size: 11pt;"  position="floating">
+                        <ion-icon name="mail"></ion-icon> Email</ion-label>
+                    <ion-input [(ngModel)]="email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label style="font-size: 11pt;" position="floating">
+                        <ion-icon name="lock"></ion-icon> Password</ion-label>
+                    <ion-input type="password" [(ngModel)]="password"></ion-input>
+                </ion-item> 
+                <br>
+                    <ion-button style="text-transform: none;" expand="block" color="light" (click)="SignIn()">Sign In</ion-button> 
+ 
+                    <ion-button style="text-transform: none;" expand="block" color="medium" routerLink="/sign-up">Sign Up</ion-button> 
+                    <ion-button style="text-transform: none;" expand="block" color="tertiary" linkedin-button (click)="linkedInLogin()">
+                        <ion-icon name="logo-linkedin" float-left></ion-icon>LinkedIn
+                    </ion-button>
+            </ion-list>
+        </ion-col> 
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Vidly</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row style="margin: 25% 0 0 0;">
+          <ion-col>
+             
+          </ion-col>
+          <ion-col>
+              <ion-img  src="../assets/images/logo.png"></ion-img>
+    
+          </ion-col>
+          <ion-col>
+             
+          </ion-col> 
+        </ion-row> 
+        <ion-row padding>
+            <ion-col padding> 
+                <ion-list>
+                    <ion-item >
+                        <ion-label style="font-size: 11pt;"  position="floating">
+                            <ion-icon name="person"></ion-icon> Name</ion-label>
+                        <ion-input [(ngModel)]="name"></ion-input>
+                    </ion-item>
+                    <ion-item >
+                        <ion-label style="font-size: 11pt;"  position="floating">
+                            <ion-icon name="mail"></ion-icon> Email</ion-label>
+                        <ion-input [(ngModel)]="email"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label style="font-size: 11pt;" position="floating">
+                            <ion-icon name="lock"></ion-icon> Password</ion-label>
+                        <ion-input [(ngModel)]="password"></ion-input>
+                    </ion-item> 
+                    <ion-item >
+                        <ion-label style="font-size: 11pt;"  position="floating">
+                            <ion-icon name="call"></ion-icon> Contacts</ion-label>
+                        <ion-input [(ngModel)]="contacts"></ion-input>
+                    </ion-item>
+                    <br>
+                        <ion-button style="text-transform: none;" expand="block" color="medium" (click)="SignUp()">
+                          Sign Up</ion-button> 
+                </ion-list>
+            </ion-col> 
+        </ion-row>
+      </ion-grid>
+</ion-content>
