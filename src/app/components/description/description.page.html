@@ -1,0 +1,13 @@
+<ion-list padding>
+    <ion-item>
+      <h5>Description</h5>
+    </ion-item>
+    <ion-item> 
+        <p style="font-weight: lighter;">{{description}}</p>
+    </ion-item>
+    <ion-item text-center>
+       <ion-button color="light" expnad="full"  (click)="closePopover()">
+          <ion-icon name="close" slot="start"></ion-icon>
+          Close</ion-button>
+    </ion-item>
+</ion-list>

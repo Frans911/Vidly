@@ -10,11 +10,11 @@
 <ion-content padding>
   <ion-item>
     <ion-label style="font-size: 11pt;" position="floating"> Name </ion-label>
-    <ion-input [(ngModel)]="movie.name"></ion-input>
+    <ion-input style="font-size: 11pt;" [(ngModel)]="movie.name"></ion-input>
   </ion-item>
   <ion-item>
       <ion-label style="font-size: 11pt;" position="floating"> Description </ion-label>
-      <ion-textarea [(ngModel)]="movie.description" rows="8"></ion-textarea>
+      <ion-textarea style="font-size: 11pt;font-weight: lighter;" [(ngModel)]="movie.description" rows="8"></ion-textarea>
     </ion-item>
 </ion-content>
 <ion-footer *ngIf="!movie.id">
@@ -26,7 +26,7 @@
   </ion-toolbar>
 </ion-footer>
 <ion-footer *ngIf="movie.id">
-  <ion-row no-padding text-center>
+  <!-- <ion-row no-padding text-center>
     <ion-col size="6">
       <ion-button expand="block" fill="outline" color="danger" (click)="deleteMovie()">
         <ion-icon name="trash" slot="start"></ion-icon>
@@ -39,6 +39,12 @@
           Update
         </ion-button>
       </ion-col>
-  </ion-row>
+  </ion-row> -->
+  <ion-toolbar text-center color="light">
+    <ion-button style="text-transform: none;"  color="secondary" (click)="updateMovie()">
+      <ion-icon name="save" slot="start"></ion-icon>
+      Update
+    </ion-button>
+  </ion-toolbar>
 </ion-footer>
 

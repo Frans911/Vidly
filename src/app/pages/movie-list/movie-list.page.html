@@ -11,8 +11,19 @@
     </ion-fab-button>
   </ion-fab>
   <ion-list>
-    <ion-item button *ngFor="let movie of (movies | async)" [routerLink]="['/movieInfo',movie.id]">
+    <!-- <ion-item button *ngFor="let movie of (movies | async)" [routerLink]="['/movieInfo',movie.id]">
       {{movie.name}}
-    </ion-item>
+    </ion-item> -->
+    <ion-item-sliding   *ngFor="let movie of (movies | async)" >
+      <ion-item-options side="start">
+        <ion-item-option color="light" [routerLink]="['/movieInfo',movie.id]">Update</ion-item-option>
+        <ion-item-option color="danger" (click)="deleteMovie(movie.id)">Delete</ion-item-option>
+      </ion-item-options>
+  
+      <ion-item (click)="presentPopover($event,movie.description)">
+        <h5>{{movie.name}}</h5>
+      </ion-item> 
+      
+    </ion-item-sliding>
   </ion-list>
 </ion-content>
