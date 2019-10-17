@@ -1,5 +1,7 @@
 {
   "name": "Vidly",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

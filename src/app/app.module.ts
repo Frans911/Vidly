@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule,FirestoreSettingsToken} from '@angular/fire/firestore' 
  
 import { DescriptionPageModule } from './components/description/description.module';
+import { HTTP } from "@ionic-native/http/ngx"; 
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +29,8 @@ import { DescriptionPageModule } from './components/description/description.modu
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: FirestoreSettingsToken, useValue: {} }
+    { provide: FirestoreSettingsToken, useValue: {} },
+    HTTP
   ],
   bootstrap: [AppComponent]
 })
